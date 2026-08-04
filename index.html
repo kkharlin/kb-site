@@ -270,6 +270,44 @@
     display:inline-flex;align-items:center;gap:7px;
   }
 
+  /* ---------- feedback letters ---------- */
+  .feedback{background:var(--bg)}
+  .feedback-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
+  .feedback-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:0;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;
+  }
+  .feedback-body{padding:28px 28px 22px;display:flex;flex-direction:column;gap:14px;flex:1}
+  .feedback-label{
+    display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
+    background:rgba(233,185,59,.14);color:var(--accent-strong);
+    font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+    padding:6px 12px;border-radius:100px;
+  }
+  .feedback-quote{
+    font-size:15px;line-height:1.6;color:var(--ink);flex:1;
+  }
+  .feedback-quote p + p{margin-top:12px}
+  .feedback-meta{
+    display:flex;align-items:flex-start;justify-content:space-between;gap:16px;
+    padding-top:16px;border-top:1px solid var(--line);
+  }
+  .feedback-meta b{display:block;font-size:15px;margin-bottom:3px}
+  .feedback-meta span{display:block;font-size:13px;color:var(--muted)}
+  .feedback-date{font-size:12.5px;color:var(--muted);white-space:nowrap;padding-top:2px}
+  .feedback-doc{
+    display:flex;align-items:center;gap:14px;padding:16px 22px 18px;
+    border-top:1px solid var(--line);background:#FAF8F4;
+  }
+  .feedback-doc img{
+    width:72px;height:96px;object-fit:cover;object-position:top;
+    border-radius:6px;border:1px solid var(--line);flex:none;background:#fff;
+  }
+  .feedback-doc-text{font-size:13.5px;color:var(--muted);line-height:1.45}
+  .feedback-doc-text b{display:block;color:var(--ink);font-size:14px;margin-bottom:2px}
+  .feedback-doc a{color:var(--accent-strong);font-weight:700;font-size:13.5px}
+  .feedback-doc a:hover{text-decoration:underline}
+
   /* ---------- reviews ---------- */
   .reviews{background:linear-gradient(180deg,#F0EBE1 0%,var(--bg) 100%)}
   .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
@@ -372,7 +410,7 @@
     .hero-grid{grid-template-columns:1fr;gap:40px}
     .expert-card{max-width:460px}
     .stats-grid{grid-template-columns:repeat(3,1fr);gap:24px}
-    .why-grid,.price-grid,.steps-grid,.case-grid,.review-grid,.extra-grid{grid-template-columns:1fr 1fr}
+    .why-grid,.price-grid,.steps-grid,.case-grid,.review-grid,.extra-grid,.feedback-grid{grid-template-columns:1fr 1fr}
     .price-card.featured{transform:none}
     .cta-grid{grid-template-columns:1fr;gap:40px}
     .nav-links{display:none}
@@ -383,7 +421,7 @@
     section{padding:52px 0}
     .hero{padding:40px 0 52px}
     .stats-grid{grid-template-columns:repeat(2,1fr)}
-    .why-grid,.price-grid,.steps-grid,.case-grid,.review-grid,.extra-grid{grid-template-columns:1fr}
+    .why-grid,.price-grid,.steps-grid,.case-grid,.review-grid,.extra-grid,.feedback-grid{grid-template-columns:1fr}
     .nav-cta .btn{display:none}
     .nav{gap:12px}
     .burger{display:block}
@@ -729,7 +767,7 @@
 <section class="reviews" id="reviews">
   <div class="wrap">
     <div class="center">
-      <span class="kicker">Отзывы</span>
+      <span class="kicker">Отзывы на Авито</span>
       <h2>Что говорят клиенты</h2>
       <p class="sub">Все отзывы — реальные, от клиентов с подтверждёнными сделками на Авито. Каждый можно проверить в нашем профиле.</p>
     </div>
@@ -768,6 +806,72 @@
     <div class="reviews-src reveal">
       <span>Рейтинг <b>5,0</b> · Более 20 реальных отзывов · на Авито с 2014 года, реквизиты проверены</span>
       <a class="btn btn-ghost" href="https://www.avito.ru/brands/i65067335" target="_blank" rel="noopener">Смотреть все отзывы на Авито →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPANY FEEDBACK / LETTERS ============ -->
+<section class="feedback" id="feedback">
+  <div class="wrap">
+    <div class="center">
+      <span class="kicker">Рекомендательные письма</span>
+      <h2>Отзывы компаний-клиентов</h2>
+      <p class="sub">Официальные отзывы на бланках организаций с печатью и подписью руководителя. Оригиналы писем можно открыть и проверить.</p>
+    </div>
+    <div class="feedback-grid">
+      <article class="feedback-card reveal">
+        <div class="feedback-body">
+          <span class="feedback-label">Отзыв о сотрудничестве</span>
+          <div class="feedback-quote">
+            <p>«Осенью прошлого года мы запустили собственное производство и в качестве одного из каналов сбыта решили протестировать тендерный рынок. Агентство нам порекомендовал партнёр, который уже несколько лет успешно сотрудничает с этой командой в сфере государственного оборонного заказа (ГОЗ). Итог полугода совместной работы — более десятка выигранных контрактов.»</p>
+            <p>«За нами закреплён персональный менеджер, который всегда находится на связи. Эксперты одинаково эффективно работают как со стандартными закупками, так и со сложными процедурами. Полное сопровождение — вплоть до финальной отгрузки продукции заказчику.»</p>
+          </div>
+          <div class="feedback-meta">
+            <div>
+              <b>ООО «Клевер»</b>
+              <span>ТЕРРИТОРИЯ производства · Зуборев Д.С., коммерческий директор</span>
+            </div>
+            <div class="feedback-date">24.07.2026</div>
+          </div>
+        </div>
+        <div class="feedback-doc">
+          <a href="assets/reviews/klever.pdf" target="_blank" rel="noopener">
+            <img src="assets/reviews/klever-thumb.jpg" alt="Скан отзыва ООО Клевер" width="72" height="96" loading="lazy">
+          </a>
+          <div class="feedback-doc-text">
+            <b>Оригинал на бланке</b>
+            Письмо с печатью организации
+            <div><a href="assets/reviews/klever.pdf" target="_blank" rel="noopener">Открыть PDF →</a></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="feedback-card reveal">
+        <div class="feedback-body">
+          <span class="feedback-label">Отзыв о деловой репутации</span>
+          <div class="feedback-quote">
+            <p>«Имея успешный опыт сотрудничества с данным агентством несколько лет назад, на определённом этапе мы сфокусировались на прямых коммерческих заказах. Однако при повторном выходе на рынок государственных и коммерческих закупок вопрос выбора партнёра для нас не стоял — мы сразу вернулись к проверенным экспертам.»</p>
+            <p>«Спустя время команда сохранила свой высочайший уровень: максимальная вовлечённость в наши бизнес-процессы, оперативная подача заявок и результативное решение сложных технических проблем на ЭТП. Прошла всего неделя с момента возобновления работы — и мы уже получили первый выигранный контракт.»</p>
+          </div>
+          <div class="feedback-meta">
+            <div>
+              <b>ООО «ИНХИМ-СИНТЕЗ»</b>
+              <span>Базанов И.Н., директор · г. Пермь</span>
+            </div>
+            <div class="feedback-date">28.07.2026</div>
+          </div>
+        </div>
+        <div class="feedback-doc">
+          <a href="assets/reviews/inhim-sintez.pdf" target="_blank" rel="noopener">
+            <img src="assets/reviews/inhim-sintez-thumb.jpg" alt="Скан отзыва ООО ИНХИМ-СИНТЕЗ" width="72" height="96" loading="lazy">
+          </a>
+          <div class="feedback-doc-text">
+            <b>Оригинал на бланке</b>
+            Письмо с печатью организации
+            <div><a href="assets/reviews/inhim-sintez.pdf" target="_blank" rel="noopener">Открыть PDF →</a></div>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
