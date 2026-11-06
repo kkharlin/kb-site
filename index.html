@@ -187,7 +187,7 @@
 
   /* ---------- services / pricing ---------- */
   .pricing{background:linear-gradient(180deg,var(--bg) 0%,#F0EBE1 100%)}
-  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;align-items:stretch}
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 22px;margin-top:44px;align-items:stretch}
   .price-card{
     background:var(--card);border:1px solid var(--line);border-radius:22px;
     padding:32px 28px;display:flex;flex-direction:column;position:relative;box-shadow:var(--shadow);
@@ -213,7 +213,18 @@
   .price-num small{font-size:15px;font-weight:600;color:var(--muted)}
   .featured .price-num{color:var(--accent)}
   .featured .price-num small{color:#BDB4A5}
-  .price-hint{font-size:13px;color:var(--muted);margin-top:6px;margin-bottom:22px}
+  .price-hint{font-size:13px;color:var(--muted);margin-top:6px;margin-bottom:6px}
+  .price-fee{display:inline-block;align-self:flex-start;font-size:12.5px;font-weight:700;color:var(--accent-strong);background:rgba(233,185,59,.14);border-radius:8px;padding:4px 10px;margin-bottom:22px}
+  .price-fee.none{background:none;padding:4px 0;color:var(--muted);font-weight:600}
+  .featured .price-fee{color:var(--accent);background:rgba(233,185,59,.16)}
+  .fee-box{margin-top:40px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px 32px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center}
+  .fee-box h3{font-size:22px;margin-bottom:10px}
+  .fee-box p{font-size:14.5px;color:var(--muted);margin-bottom:10px}
+  .fee-box p b{color:var(--ink)}
+  .fee-examples{display:flex;flex-direction:column;gap:8px}
+  .fee-row{display:flex;justify-content:space-between;gap:12px;padding:11px 16px;border-radius:12px;background:var(--bg);font-size:14.5px}
+  .fee-row b{white-space:nowrap}
+  .fee-row.cap{background:rgba(233,185,59,.14)}
   .featured .price-hint{color:#BDB4A5}
   .price-list{display:flex;flex-direction:column;gap:10px;margin-bottom:26px;flex:1}
   .price-list li{display:flex;gap:10px;font-size:14.5px;align-items:flex-start}
@@ -442,6 +453,7 @@
     .why-grid,.price-grid,.steps-grid,.case-grid,.review-grid,.extra-grid{grid-template-columns:1fr 1fr}
     .feedback-grid{grid-template-columns:1fr;max-width:720px;margin-left:auto;margin-right:auto}
     .price-card.featured{transform:none}
+    .fee-box{grid-template-columns:1fr;padding:26px 22px}
     .cta-grid{grid-template-columns:1fr;gap:40px}
     .nav-links{display:none}
     .nav-phone{display:block}
@@ -620,21 +632,66 @@
     <div class="center">
       <span class="kicker">Услуги и цены</span>
       <h2>Форматы работы</h2>
-      <p class="sub">Начните с разовой подачи или передайте тендеры нам полностью — это дешевле, чем содержать штатного специалиста.</p>
+      <p class="sub">Начните с поиска или разовой подачи — или передайте тендеры нам полностью. Всё прозрачно: фиксированная цена за работу и процент только с выигранных контрактов.</p>
     </div>
     <div class="price-grid">
       <div class="price-card reveal">
-        <h3>Разовые подачи</h3>
-        <p class="price-for">Для тех, кто участвует в закупках время от времени или хочет попробовать</p>
-        <div class="price-num">19 000 ₽ <small>/ 5 подач</small></div>
-        <p class="price-hint">3 800 ₽ за одну подачу</p>
+        <h3>Разовая подача · 44-ФЗ</h3>
+        <p class="price-for">Для тех, кто участвует в госзакупках время от времени или хочет попробовать</p>
+        <div class="price-num">6 900 ₽ <small>/ подача</small></div>
+        <p class="price-hint">Всё включено — без доплат за контракт и акты</p>
+        <p class="price-fee">+ 1% от суммы контракта при победе</p>
         <ul class="price-list">
-          <li><span class="check">✓</span>Подготовка пакета документов</li>
-          <li><span class="check">✓</span>Подача заявки на площадке</li>
+          <li><span class="check">✓</span>Подготовка пакета документов и подача заявки</li>
           <li><span class="check">✓</span>Участие в аукционе</li>
-          <li><span class="check">✓</span>Берёмся за срочные тендеры «подача завтра»</li>
+          <li><span class="check">✓</span>Подписание контракта</li>
+          <li><span class="check">✓</span>Загрузка закрывающих документов в ЕИС</li>
+          <li><span class="check">✓</span>Гарантия допуска: отклонят по нашей вине — вернём стоимость подачи</li>
         </ul>
         <a class="btn btn-ghost" href="#contact">Обсудить задачу</a>
+      </div>
+      <div class="price-card reveal">
+        <h3>Разовая подача · 223-ФЗ</h3>
+        <p class="price-for">Закупки госкомпаний и корпораций: индивидуальные формы и требования</p>
+        <div class="price-num">7 900 ₽ <small>/ подача</small></div>
+        <p class="price-hint">Всё включено — без доплат за контракт и акты</p>
+        <p class="price-fee">+ 1% от суммы контракта при победе</p>
+        <ul class="price-list">
+          <li><span class="check">✓</span>Подготовка пакета документов и подача заявки</li>
+          <li><span class="check">✓</span>Участие в аукционе</li>
+          <li><span class="check">✓</span>Подписание контракта</li>
+          <li><span class="check">✓</span>Загрузка закрывающих документов в ЕИС</li>
+          <li><span class="check">✓</span>Гарантия допуска: отклонят по нашей вине — вернём стоимость подачи</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Обсудить задачу</a>
+      </div>
+      <div class="price-card reveal">
+        <h3>Поиск и мониторинг</h3>
+        <p class="price-for">Для тех, кто подаётся сам, но не хочет тратить время на поиск закупок</p>
+        <div class="price-num">14 900 ₽ <small>/ месяц</small></div>
+        <p class="price-hint">Каждый рабочий день с использованием трёх агрегаторов</p>
+        <p class="price-fee none">Без процента от контракта</p>
+        <ul class="price-list">
+          <li><span class="check">✓</span>Три платных агрегатора + ручной отбор</li>
+          <li><span class="check">✓</span>Только целевые закупки под ваши критерии</li>
+          <li><span class="check">✓</span>Подборка в мессенджер или на почту</li>
+          <li><span class="check">✓</span>Зачитывается в стоимость при переходе на сопровождение</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Подключить поиск</a>
+      </div>
+      <div class="price-card reveal">
+        <h3>Пакет 5 подач</h3>
+        <p class="price-for">Для регулярного участия без абонентской платы</p>
+        <div class="price-num">29 900 ₽ <small>/ 5 подач</small></div>
+        <p class="price-hint">5 980 ₽ за подачу · 44-ФЗ и 223-ФЗ в любом сочетании, 3 месяца</p>
+        <p class="price-fee">+ 1% от суммы контракта при победе</p>
+        <ul class="price-list">
+          <li><span class="check">✓</span>Всё, что входит в разовую подачу</li>
+          <li><span class="check">✓</span>Экономия до 9 600 ₽ против разовых подач</li>
+          <li><span class="check">✓</span>Приоритет при срочных подачах</li>
+          <li><span class="check">✓</span>Гарантия допуска на каждую заявку</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Купить пакет</a>
       </div>
       <div class="price-card featured reveal">
         <span class="price-badge">Выбирают чаще всего</span>
@@ -642,6 +699,7 @@
         <p class="price-for">Полное ведение тендерного направления вашей компании</p>
         <div class="price-num">49 000 ₽ <small>/ месяц</small></div>
         <p class="price-hint">Безлимит подач — без ограничений по количеству заявок</p>
+        <p class="price-fee">+ 1% от суммы контракта при победе</p>
         <ul class="price-list">
           <li><span class="check">✓</span>Ежедневный ручной подбор закупок</li>
           <li><span class="check">✓</span>Аналитика ниши и конкурентов</li>
@@ -658,6 +716,7 @@
         <p class="price-for">Гособоронзаказ (АСТ ГОЗ), закупки с проектной документацией, нестандартные процедуры</p>
         <div class="price-num">от 29 000 ₽ <small>/ подача</small></div>
         <p class="price-hint">Точная стоимость — после разбора документации</p>
+        <p class="price-fee">+ 1% от суммы контракта при победе</p>
         <ul class="price-list">
           <li><span class="check">✓</span>Разбор закупочной документации</li>
           <li><span class="check">✓</span>Запросы разъяснений заказчику</li>
@@ -667,9 +726,22 @@
         <a class="btn btn-ghost" href="#contact">Обсудить закупку</a>
       </div>
     </div>
+    <div class="fee-box reveal">
+      <div>
+        <h3>Мы зарабатываем, когда вы выигрываете</h3>
+        <p>Фиксированная цена покрывает работу над заявкой. Процент от суммы заключённого контракта начисляется только после подписания. Нет победы — нет процента.</p>
+        <p><b>1%</b> от цены контракта на всех тарифах, кроме поиска: минимум <b>5 000 ₽</b>, максимум <b>200 000 ₽</b> за контракт.</p>
+      </div>
+      <div class="fee-examples">
+        <div class="fee-row"><span>Контракт на 300 000 ₽</span><b>5 000 ₽ — минимум</b></div>
+        <div class="fee-row"><span>Контракт на 2 млн ₽</span><b>20 000 ₽</b></div>
+        <div class="fee-row"><span>Контракт на 10 млн ₽</span><b>100 000 ₽</b></div>
+        <div class="fee-row cap"><span>От 20 млн ₽ — потолок</span><b>200 000 ₽</b></div>
+      </div>
+    </div>
     <div class="pricing-note reveal">
       <span>💡</span>
-      <div><b>Фиксируем стоимость в договоре.</b> Работаем по предоплате, оплата по безналу на расчётный счёт. Цены для новых клиентов планово повышаются — заключив договор сейчас, вы сохраняете текущие условия.</div>
+      <div><b>Фиксируем стоимость в договоре.</b> Работаем по предоплате, оплата по безналу на расчётный счёт. Документы для подачи — за 2 рабочих дня до окончания срока; срочные заявки «на завтра» тоже берём. Цены для новых клиентов планово повышаются — заключив договор сейчас, вы сохраняете текущие условия.</div>
     </div>
     <div class="extra-grid">
       <div class="extra reveal"><span class="em">🏗️</span><div><b>Вступление в СРО</b><span>проконсультируем по всем вопросам, в ряде регионов поможем с кадровым составом</span></div></div>
@@ -966,7 +1038,7 @@
     <div class="faq-list">
       <details class="reveal" open>
         <summary>Даёте ли вы гарантии?</summary>
-        <div class="faq-body">Гарантируем 100% допуск заявки к торгам: документы будут подготовлены и поданы без ошибок. Победу в аукционе честный специалист гарантировать не может — на цену влияют конкуренты. Но наша статистика говорит сама за себя: до 90% клиентов получают контракт уже в первый месяц работы.</div>
+        <div class="faq-body">Гарантируем 100% допуск заявки к торгам: документы будут подготовлены и поданы без ошибок. Это прописано в договоре — если заявку отклонят по нашей вине, вернём стоимость подачи. Победу в аукционе честный специалист гарантировать не может — на цену влияют конкуренты. Но наша статистика говорит сама за себя: до 90% клиентов получают контракт уже в первый месяц работы.</div>
       </details>
       <details class="reveal">
         <summary>Как понять, стоит ли мне вообще заходить в тендеры?</summary>
@@ -978,7 +1050,15 @@
       </details>
       <details class="reveal">
         <summary>Это дорого?</summary>
-        <div class="faq-body">Сопровождение с безлимитом подач стоит 49 000 ₽ в месяц. Штатный тендерный специалист обойдётся в 2–3 раза дороже — а у нас вы получаете сразу команду: тендерного специалиста, сметчика и юриста. Если участвуете редко, есть разовые подачи от 3 800 ₽. Первая консультация и анализ ниши — бесплатно.</div>
+        <div class="faq-body">Сопровождение с безлимитом подач стоит 49 000 ₽ в месяц плюс 1% с выигранных контрактов. Штатный тендерный специалист обойдётся в 2–3 раза дороже — а у нас вы получаете сразу команду: тендерного специалиста, сметчика и юриста. Если участвуете редко, есть разовые подачи от 6 900 ₽ «всё включено» и пакет из 5 подач за 29 900 ₽. Первая консультация и анализ ниши — бесплатно.</div>
+      </details>
+      <details class="reveal">
+        <summary>Зачем процент от контракта, если я уже плачу за подачу?</summary>
+        <div class="faq-body">Фиксированная часть покрывает работу над заявкой, а процент — это наш результат. Так нам выгодно, чтобы вы именно выигрывали, а не просто подавались. Процент берём только с подписанного контракта: 1% от его цены, минимум 5 000 ₽, максимум 200 000 ₽. Никаких других доплат — подписание контракта и акты в ЕИС уже входят в цену.</div>
+      </details>
+      <details class="reveal">
+        <summary>Что входит в разовую подачу?</summary>
+        <div class="faq-body">Всё от подготовки документов до закрытия: пакет документов, подача заявки, участие в аукционе, подписание контракта и загрузка закрывающих документов в ЕИС. Отдельно за контракт и акты платить не нужно. Документы нужны за 2 рабочих дня до окончания подачи, но срочные заявки «на завтра» тоже берём.</div>
       </details>
       <details class="reveal">
         <summary>Информация не уйдёт на сторону?</summary>
